@@ -16,5 +16,8 @@ export function filter(req, res, next) {
     if (req.user && req.user.id) {
         return next();
     }
-    return res.send(400, { message: 'ACCESS_DENIED' });
+    return res.status(403).send({
+        success: false,
+        message: 'ACCESS_DENIED'
+    });
 }
