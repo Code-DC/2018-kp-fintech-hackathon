@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import items from '../tools/items';
+import itemlist from '../tools/items';
 
 const router = Router();
 
@@ -7,15 +7,17 @@ router.get('/:idx', (req, res) => {
     res.send({
         success: true,
         message: 'SUCCESS',
-        item: items.find(i => i.idx === req.params.idx)
+        item: itemlist.find(i => i.idx.toString() === req.params.idx)
     });
 })
 
 router.get('/', (req, res) => {
+    const { price } = req.query;
+    const items = price ? itemlist.filter(i => Math.floor(i.price / 10000) === Number(price)) : itemlist;
     res.send({
         success: true,
         message: 'SUCCESS',
-        items: items
+        items
     });
 });
 

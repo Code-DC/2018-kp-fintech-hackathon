@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         }
         const productInfo = data.data;
         productInfo.profitRate = Number(productInfo.profitRate);
-        const product = await Product.create(productInfo);
+        const product = await Product.findById((await Product.create(productInfo))._id);
         return res.send({
             success: true,
             message: 'SUCCESS',
