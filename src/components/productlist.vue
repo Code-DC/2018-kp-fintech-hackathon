@@ -177,7 +177,7 @@
   th{
     border: solid 1px silver;
     padding: 12px 8px;
-    padding-right: 260px;
+    padding-right: 410px;
     border-right: none;
     border-bottom: none;
     font-weight: 300;
