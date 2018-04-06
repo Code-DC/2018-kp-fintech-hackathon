@@ -1,22 +1,22 @@
 import { Router } from 'express';
+import { sign } from 'jsonwebtoken';
+import constants from '../config/constants';
 import User from '../database/models/User';
-import { checkProperty } from '../tools/validator';
-import accountNumber from '../tools/account-number';
+import { filter } from '../tools/authentication';
 
 const router = Router();
 
 router.post('/', async (req, res) => {
     try {
-        const data = checkProperty(req.body, 'user', true);
-        if (data.message !== 'SUCCESS') {
-            throw new Error(data.message);
+        const user = (await User.login(req.body.username, req.body.password))[0];
+        if (!user) {
+            throw new Error('이메일 혹은 암호가 일치하지 않습니다.');
         }
-        const userInfo = data.data;
-        userInfo.accountNumber = accountNumber();
-        const user = await User.findById((await User.create(userInfo))._id);
+        const token = sign({ id: user._id }, constants.JWT_SALT);
         return res.send({
             success: true,
             message: 'SUCCESS',
+            token,
             user
         });
     } catch ({ message }) {
@@ -25,22 +25,28 @@ router.post('/', async (req, res) => {
             message
         });
     }
+
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/me', filter, async (req, res) => {
+
     try {
-        const user = await User.findById(req.params.id);
+
+        const user = await User.findById(req.user.id);
         return res.send({
             success: true,
             message: 'SUCCESS',
             user
         });
+
     } catch ({ message }) {
         return res.status(400).send({
             success: false,
             message
         });
     }
+
 });
+
 
 export default router;
