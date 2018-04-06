@@ -5,9 +5,9 @@
         <img src="../assets/mainLogo.png" alt="" id="logo">
         <li><span>금융상품</span></li>
         <li>예금</li>
+        <li>적금</li>
         <li>보험</li>
         <li>카드</li>
-        <li>적금</li>
         <a href="" id="af">보안센터</a><a href="">고객센터</a>
       </ul>
     </div>
@@ -44,10 +44,10 @@
         <div class="detail-info">
           <ul>
             <li>
-              최종 목표 금액까지 45,000,000원 남았습니다.
+              최종 목표 금액까지 38,500,000원 남았습니다.
             </li>
             <li>
-              적금 만기일까지 1826일 남았습니다.
+              적금 만기일까지 945일 남았습니다.
             </li>
           </ul>
         </div>
@@ -61,10 +61,22 @@
           <td id="ttitle-color">금액(원)</td>
         </tr>
         <tr class="fborder2">
+          <td>2018.02.06</td>
+          <td>이동현</td>
+          <td>우체국은행 110-419-387528</td>
+          <td>100,000</td>
+        </tr>
+        <tr class="fborder2">
+          <td>2018.03.06</td>
+          <td>이동현</td>
+          <td>우체국은행 110-419-387528</td>
+          <td>100,000</td>
+        </tr>
+        <tr class="fborder2">
           <td>2018.04.06</td>
           <td>이동현</td>
           <td>우체국은행 110-419-387528</td>
-          <td>500,000</td>
+          <td>100,000</td>
         </tr>
       </table>
       <table>

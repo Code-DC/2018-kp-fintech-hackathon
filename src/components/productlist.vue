@@ -4,10 +4,11 @@
       <ul>
         <img src="../assets/mainLogo.png" alt="" id="logo">
         <li><span>금융상품</span></li>
-        <li>예금</li>
+        <li>예금</li>        
+        <li>적금</li>
         <li>보험</li>
         <li>카드</li>
-        <li>적금</li>
+
         <a href="" id="af">보안센터</a><a href="">고객센터</a>
       </ul>
     </div>
