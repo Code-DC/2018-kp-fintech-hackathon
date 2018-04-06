@@ -3,6 +3,11 @@ export const CHECK_LIST = {
         { property: 'username', reg: /^(?=.*).{2,20}$/, message: '올바르지 않은 이름입니다. (username)' },
         { property: 'email', reg: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, message: '올바르지 않은 이메일입니다. (email)' },
         { property: 'password', reg: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,20}$/, message: '올바르지 않은 암호입니다. (password)' }
+    ],
+    product: [
+        { property: 'title', reg: /.+/, message: '상품타이틀 (title)' },
+        { property: 'description', reg: /.+/, message: '상품설명 (description)' },
+        { property: 'profitRate', reg: /0\.[0-9]{2}/, message: '상품이율 0.xx (profitRate)' },
     ]
 };
 

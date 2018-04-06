@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
-        res.send({
+        return res.send({
             success: true,
             message: 'SUCCESS',
             user
