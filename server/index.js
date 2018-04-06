@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import cors from 'cors';
+import fileUpload from 'express-fileupload';
 import { join } from 'path';
 
 import constants from './config/constants';
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/resources', express.static(join(__dirname, 'resources')));
 app.use(express.static(join(__dirname, '..', 'dist')));
+app.use(fileUpload());
 app.use(cors());
 
 app.use(auth);

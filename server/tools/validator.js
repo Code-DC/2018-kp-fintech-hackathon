@@ -1,14 +1,8 @@
 export const CHECK_LIST = {
     user: [
-        { property: 'username', reg: /^(?=.*).{2,20}$/, message: 'INVALID_USERNAME' },
-        { property: 'email', reg: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, message: 'INVALID_EMAIL' },
-        { property: 'password', reg: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,20}$/, message: 'INVALID_PASSWORD' }
-    ],
-    post: [
-        { property: 'content', reg: /^(?=.*).+$/m, message: 'INVALID_CONTENT' }
-    ],
-    comment: [
-        { property: 'content', reg: /^(?=.*).+$/m, message: 'INVALID_CONTENT' }
+        { property: 'username', reg: /^(?=.*).{2,20}$/, message: '올바르지 않은 이름입니다. (username)' },
+        { property: 'email', reg: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, message: '올바르지 않은 이메일입니다. (email)' },
+        { property: 'password', reg: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,20}$/, message: '올바르지 않은 암호입니다. (password)' }
     ]
 };
 
