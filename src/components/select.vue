@@ -17,17 +17,18 @@
     <div class="list-container">
       <span id="item-select">만기일에 받을 최종 상품을 선택해주세요</span>
       <div class="item-list">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item" id="item1"></div>
+        <div class="item" id="item2"></div>
+        <div class="item" id="item3"></div>
       </div>
       <div class="item-list">
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item" id="item4"></div>
+        <div class="item" id="item5"></div>
       </div>
-      <span id="item-select-last">적금 만기일날 선택하겠습니다.<input type="checkbox" name="" id=""></span>
+      <span id="item-select-last">우체국 쇼핑 포인트로 받겠습니다.<input type="radio" name="iselect" id=""></span>
+      <span id="item-select-last">적금 만기일날 선택하겠습니다.<input type="radio" name="iselect" id=""></span>
       <span>* 적금 만기일 선택시 상품이 달라질수 있습니다. 단, 상품의 가격대는 동일합니다.</span>
-      <button style="padding: 10px 24px; margin: 12px 0;">적금계좌개설하기</button>
+      <a href="../#/account" style="padding: 8px; font-size: 24px; margin: 22px 0px;">적금계좌 개설하기</a>
     </div>
   </div>
 </template>
@@ -163,6 +164,26 @@
     font-size: 18px;
     margin: 12px 0;
   }
+  #item1{
+    background-image: url(../assets/201607181207116690.jpg);
+    background-size: 300px 300px;
+  }
+  #item2{
+    background-image: url(../assets/ES1007236_reprsnt_image_20170707053445941_l.png);
+    background-size: 300px 300px;
+  }
+  #item3{
+    background-image: url(../assets/ES1012625_reprsnt_image_20171129042238864.png);
+    background-size: 300px 300px;
+  }
+  #item4{
+    background-image: url(../assets/ES1011233_reprsnt_image_20171013111603667_l.png);
+    background-size: 300px 300px;
+  }
+  #item5{
+    background-image: url(../assets/G1005426_reprsnt_image_20171130014400763_l.png);
+    background-size: 300px 300px;
+  }
   .list-container{
     width: 100%;
     display: flex;
@@ -209,6 +230,13 @@
     height: 300px;
     border: solid 1px silver;
     margin: 0 12px;
+  }
+  .item:hover{
+    border: solid 2px #888888;
+    transition: 0.1s;
+  }
+  .item:active{
+    border: solid 3px #888888;
   }
 </style>
 

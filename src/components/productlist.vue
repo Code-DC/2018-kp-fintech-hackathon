@@ -34,8 +34,8 @@
             </td>
         </tr>
         <tr>
-          <td>이메일번호</td>
-          <td><input type="text" name="" id=""></td>
+          <td>이메일</td>
+          <td>mallak5335@naver.com</td>
         </tr>
       </table>
       <table>
@@ -64,15 +64,25 @@
         </tr>
         <tr>
           <th>적립방법</th>
-          <th>자동이체</th>
+          <th>자유적립</th>
         </tr>
         <tr>
           <th>자동이체계좌 비밀번호</th>
           <th><input type="password" name="" id="" placeholder="비밀번호 4자리를 입력하세요."></th>
         </tr>
         <tr>
+          <th>자동이체를 신청하시겠습니까?</th>
+          <th>
+            O<input type="radio" name="marriage" id=""> 
+            X<input type="radio" name="marriage" id="">
+          </th>
+        </tr>
+        <tr>
           <th>자동이체 금액</th>
-          <th><input type="text" name="" id="" placeholder="금액을 입력해 주세요"> 원</th>
+          <th>
+            864,000 원 
+            <span> <p>* 현재 보이는 금액으로 자동이체를 하실경우 </p><p>목표 금액을 달성하고 만기환급을 받으실 수 있습니다.</p></span>
+          </th>
         </tr>
         <tr>
           <th>자동이체 지정일</th>
@@ -139,7 +149,7 @@
           <th>자녀수</th>
           <th>
             <select name="" id="">
-              <option value="1">1</option>
+              <option value="0">0</option>
             </select> 명
           </th>
         </tr>
@@ -161,9 +171,36 @@
           </th>
         </tr>
       </table>
+      <table>
+        <span id="title">첨부파일</span>
+        <tr class="fborder">
+          <td>소득금액증명서</td>
+          <td>
+            <input type="file" name="" id="">
+          </td>
+        </tr>
+        <tr class="fborder2">
+          <td>가족관계증명서</td>
+          <td>
+            <input type="file" name="" id="">
+          </td>
+        </tr>
+        <tr class="fborder2">
+          <td>신용등급확인서</td>
+          <td>
+            <input type="file" name="" id="">
+          </td>
+        </tr>
+        <tr class="fborder2">
+          <td>작년도 연말정산서</td>
+          <td>
+            <input type="file" name="" id="">
+          </td>
+        </tr>
+      </table>
       <span id="agree-title">개인정보 제공 및 사용에 동의하십니까?</span>
       <span id="agree-check"><input type="checkbox" name="" id=""> 동의합니다.</span>
-      <button id="next">다음단계로</button>
+      <a href="../#/select" style="padding: 8px; font-size: 24px; margin: 22px 0px;">다음단계로</a>
     </div>
   </div>
 </template>
@@ -193,7 +230,7 @@
   td{
     border-bottom: solid 1px silver;
     padding: 12px 8px;
-    padding-right: 200px;
+    padding-right: 550px;
   }
   td:first-child{
     border-right: solid 1px silver;
@@ -290,6 +327,10 @@
   }
   .fborder > *{
     border-top: solid 1px orange;
+    text-align: center;
+  }
+  .fborder2{
+    text-align: center;
   }
 </style>
 
